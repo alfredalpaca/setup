@@ -1,0 +1,6 @@
+.idea
+*.swp
+
+secret-vars.sh
+
+shell/aliases/work/
