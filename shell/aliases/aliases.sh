@@ -1,4 +1,8 @@
+# This alias is for managing dotfiles with a bare git repository
 alias config='/usr/bin/git --git-dir=$HOME/src/dotfiles --work-tree=$HOME'
+
+# In some linux distros installing neovim doesnt alias vi and vim to nvim
+# To use vim use \vim
 alias vim='nvim'
 alias vi='nvim'
 
