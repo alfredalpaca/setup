@@ -33,5 +33,5 @@ Note: This gitconfig expects the `[user]` block to be defined in `$HOME/.config/
 
 # TODO
 
-- [] clean up `add-aliases-and-vars.sh`
-- [] `help` make target
+- [ ] clean up `add-aliases-and-vars.sh`
+- [ ] `help` make target
