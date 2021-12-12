@@ -6,7 +6,7 @@ Clone this repo and run
 ```
 make install-omz
 ``` 
-It will install [Oh My Zsh](https://ohmyz.sh/). After that is done run 
+It will install [Oh My Zsh](https://ohmyz.sh/). Log out and log back in for the shell change to take effect. After that is done run 
 ```
 make setup
 ```
