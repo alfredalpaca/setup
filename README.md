@@ -14,3 +14,5 @@ Simply clone this repo and run the setup make target. `shell/add-aliases-and-var
 # Gitconfig
 
 The setup target also runs the `gitconfig` target which runs the `gitconfig.sh` script. This script copies the gitconfig in this repo to `$HOME`. If a gitconfig already exists, its renamed to `.gitconfig.bckup` so a rollback is possible if necessary.
+
+Note: This gitconfig expects the `[user]` block to be defined in `$HOME/.config/gitconfig/personal`
