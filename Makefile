@@ -16,4 +16,4 @@ gitconfig:
 	./gitconfig.sh
 	echo "copied gitconfig. gitconfig.bckup is in homedir"
 
-setup: install-omz omz-theme aliases-and-env-vars gitconfig install-sdkman
+setup: omz-theme aliases-and-env-vars gitconfig install-sdkman

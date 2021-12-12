@@ -2,7 +2,7 @@
 
 > Note: Have `zsh`, `zip` and `unzip` installed.
 
-Simply clone this repo and run the `setup` make target. It will install [Oh My Zsh](https://ohmyz.sh/), set its theme to `bira`, add aliases and environment variables and install `sdkman`.
+Clone this repo and run the `install-omz`. It will install [Oh My Zsh](https://ohmyz.sh/). After that is done run `make setup`. This will set Oh my zsh's theme to `bira`, add aliases and environment variables, and install `sdkman`.
 
 # Shell
 
