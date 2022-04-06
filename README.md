@@ -1,16 +1,27 @@
+# `gitconfig`
+
+This repo has a `gitconfig` make target. It creates a symlink `~/.gitconfig` that points to the included `.gitconfig` (If a gitconfig already exists, it's renamed to `.gitconfig.bckup` so a rollback is possible if necessary.). The `.gitconfig` has no user block and includes it from the `gituser` directory. You can add additional configs for specific directories using the commented out `includeIf` block. 
+
+> Note: `gituser/work` is in `.gitignore`. 
+
 # Usage
 
 > Note: Have `zsh`, `zip` and `unzip` installed.
 
-Clone this repo and run 
+
+Clone this repo into `~/src/`. (The `gitconfig` make target assumes this. If you choose to deviate, edit `gitconfig.sh` and `.gitconfig`'s includes accordingly.)
+
 ```
 make install-omz
 ``` 
-It will install [Oh My Zsh](https://ohmyz.sh/). Log out and log back in for the shell change to take effect. After that is done run 
+
+It will install [Oh My Zsh](https://ohmyz.sh/). If you weren't already using zsh, log out and log back in for the shell change to take effect. After that is done run 
+
 ```
 make setup
 ```
-This will set Oh my zsh's theme to `bira`, add aliases and environment variables, and install `sdkman`.
+
+This will set Oh my zsh's theme to `bira`, add aliases and environment variables, set `gitconfig` and install `sdkman`.
 
 # Shell
 
@@ -32,12 +43,6 @@ make omz-theme THEME=yourFavouriteThemeNameHere
 > Note 1: `shell/aliases/work/` and `secret-vars.sh` are in `.gitignore` so any sh files in the work dir or environment variables in `secret-vars.sh` file will not be tracked by git.
 
 > Note 2: Remember to rerun `make aliases-and-env-vars` when you add a alias or env var sh file
-
-# Gitconfig
-
-The setup target also runs the `gitconfig` target which runs the `gitconfig.sh` script. This script copies the gitconfig in this repo to `$HOME`. If a gitconfig already exists, its renamed to `.gitconfig.bckup` so a rollback is possible if necessary.
-
-Note: This gitconfig expects the `[user]` block to be defined in `$HOME/.config/gitconfig/personal`
 
 # TODO
 

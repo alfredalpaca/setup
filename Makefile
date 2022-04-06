@@ -14,6 +14,5 @@ aliases-and-env-vars:
 
 gitconfig:
 	./gitconfig.sh
-	echo "copied gitconfig. gitconfig.bckup is in homedir"
 
 setup: omz-theme aliases-and-env-vars gitconfig install-sdkman

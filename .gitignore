@@ -3,4 +3,6 @@
 
 secret-vars.sh
 
+# ignore work aliases and gitconfig
 shell/aliases/work/
+gituser/work
