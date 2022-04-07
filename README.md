@@ -1,3 +1,5 @@
+NOTE: Currently broken for mac
+
 # `gitconfig`
 
 This repo has a `gitconfig` make target. It creates a symlink `~/.gitconfig` that points to the included `.gitconfig` (If a gitconfig already exists, it's renamed to `.gitconfig.bckup` so a rollback is possible if necessary.). The `.gitconfig` has no user block and includes it from the `gituser` directory. You can add additional configs for specific directories using the commented out `includeIf` block. 
