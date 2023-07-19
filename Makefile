@@ -3,7 +3,7 @@ install-omz:
 
 THEME=bira
 omz-theme:
-	sed -i 's/ZSH_THEME=".*"/ZSH_THEME="$(THEME)"/g' $(HOME)/.zshrc
+	cat .zshrc > $(HOME)/.zshrc
 
 install-sdkman:
 	curl -s "https://get.sdkman.io" | bash

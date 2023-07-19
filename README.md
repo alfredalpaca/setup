@@ -1,4 +1,10 @@
-NOTE: Currently broken for mac
+### Note for mac users
+
+Make sure GNU coreutils are installed. This can be done using [brew](https://brew.sh/):
+
+```sh
+brew install coreutils
+```
 
 # `gitconfig`
 
@@ -48,5 +54,5 @@ make omz-theme THEME=yourFavouriteThemeNameHere
 
 # TODO
 
-- [ ] clean up `add-aliases-and-vars.sh`
+- [x] clean up `add-aliases-and-vars.sh`
 - [ ] `help` make target
