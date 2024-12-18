@@ -1,10 +1,9 @@
 ### Note for mac users
+>Note: NOT FUNCTIONAL ON MAC
 
-Make sure GNU coreutils are installed. This can be done using [brew](https://brew.sh/):
+~~Make sure GNU coreutils are installed. <u>_Without this some scripts WILL break_</u>. This can be done using [brew](https://brew.sh/):~~
 
-```sh
-brew install coreutils
-```
+Core utils on BSD/Mac systems are different from the GNU core utils on linux systems. These utils can be installed manually but the binaries for those come with a g prefix that makes accounting for it everywhere in scripts a hassle. Till a solution for this is found, it is advised to not use the scripts in this repo on Mac systems unless you know what you're doing.
 
 # `gitconfig`
 
@@ -29,11 +28,13 @@ It will install [Oh My Zsh](https://ohmyz.sh/). If you weren't already using zsh
 make setup
 ```
 
-This will set Oh my zsh's theme to `bira`, add aliases and environment variables, set `gitconfig` and install `sdkman`.
+This will set Oh my zsh's theme to `bira`, add aliases and environment variables, set `gitconfig`.
 
 # Shell
 
-## Oh my zsh
+## Oh my zsh - <ins>Make target disabled</ins>
+
+> This make target is currently not functional and thus commented out in the Makefile
 
 The `install-omz` make target basically runs the command from Oh My Zsh's site. The `omz-theme` make target modifies .zshrc and sets the theme to bira. If you want to set another theme, simply run: 
 ```
