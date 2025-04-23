@@ -1,13 +1,13 @@
 install-omz:
 	sh -c "$$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-#THEME=bira
-#omz-theme:
-#	cat .zshrc > $(HOME)/.zshrc
+THEME=bira
+omz-theme:
+	cat .zshrc > $(HOME)/.zshrc
 
-install-sdkman:
-	curl -s "https://get.sdkman.io" | bash
-	source "$(HOME)/.sdkman/bin/sdkman-init.sh"
+# install-sdkman:
+# 	curl -s "https://get.sdkman.io" | bash
+# 	source "$(HOME)/.sdkman/bin/sdkman-init.sh"
 
 aliases-and-env-vars:
 	shell/add-aliases-and-vars.sh
@@ -15,4 +15,4 @@ aliases-and-env-vars:
 gitconfig:
 	./gitconfig.sh
 
-setup-base: omz-theme aliases-and-env-vars gitconfig
+setup-base: omz-theme aliases-and-env-vars

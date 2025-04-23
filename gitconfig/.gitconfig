@@ -14,10 +14,10 @@
 
 # user {{{
 [include]
-	path = ~/src/setup/gituser/personal
+	path = ~/src/setup/gitusers/personal
 
 # [includeIf "gitdir:~/src/work/"]
-# 	path = ~/src/setup/gituser/work
+# 	path = ~/src/setup/gitusers/work
 #}}}
 
 # color {{{
