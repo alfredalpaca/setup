@@ -1,16 +1,22 @@
 ### Note for mac users
 
-Make sure GNU coreutils are installed. This can be done using [brew](https://brew.sh/):
+~~Core utils on BSD/Mac systems are different from the GNU core utils on linux systems. These utils can be installed manually but the binaries for those come with a g prefix that makes accounting for it everywhere in scripts a hassle. Till a solution for this is found, it is advised to not use the scripts in this repo on Mac systems unless you know what you're doing.~~
 
-```sh
+>Note about the above: The only real issue that was faced was with `sed`. Since the system already has `sed`, GNU `sed` can only be used with `gsed`. OS based `sed` differences have been handled in scripts now.
+
+Make sure GNU coreutils are installed. <u>_Without this some scripts might break_</u>. This can be done using [brew](https://brew.sh/):
+
+```
 brew install coreutils
 ```
 
 # `gitconfig`
 
-This repo has a `gitconfig` make target. It creates a symlink `~/.gitconfig` that points to the included `.gitconfig` (If a gitconfig already exists, it's renamed to `.gitconfig.bckup` so a rollback is possible if necessary.). The `.gitconfig` has no user block and includes it from the `gituser` directory. You can add additional configs for specific directories using the commented out `includeIf` block. 
+This repo has a `gitconfig` make target. It creates a symlink `~/.gitconfig` that points to the included `.gitconfig` (If a gitconfig already exists, it's renamed to `.gitconfig.script-bckup` so a rollback is possible if necessary.). The `.gitconfig` has no user block and includes it from the `gitusers/personal` file (created as part of the script). You can add additional configs for specific directories using the commented out `includeIf` block.
 
-> Note: `gituser/work` is in `.gitignore`. 
+If signing key needs to be setup, refer to the signed commits sample template. Currently the script guides the user through the creation of a basic git user with name and email. Script support for git user with signature is planned to be added in the future.
+
+> Note: `gitusers/` is in `.gitignore`. 
 
 # Usage
 
@@ -29,7 +35,7 @@ It will install [Oh My Zsh](https://ohmyz.sh/). If you weren't already using zsh
 make setup
 ```
 
-This will set Oh my zsh's theme to `bira`, add aliases and environment variables, set `gitconfig` and install `sdkman`.
+This will set Oh my zsh's theme to `bira`, add aliases and environment variables, set `gitconfig`.
 
 # Shell
 

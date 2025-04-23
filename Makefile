@@ -3,11 +3,12 @@ install-omz:
 
 THEME=bira
 omz-theme:
-	cat .zshrc > $(HOME)/.zshrc
+	@echo "Updating ZSH_THEME in .zshrc to '$(THEME)'"
+	@./utils/find-and-replace-in-file.sh "$(HOME)/.zshrc" 's/^ZSH_THEME=".*"/ZSH_THEME="$(THEME)"/'
 
-install-sdkman:
-	curl -s "https://get.sdkman.io" | bash
-	source "$(HOME)/.sdkman/bin/sdkman-init.sh"
+# install-sdkman:
+# 	curl -s "https://get.sdkman.io" | bash
+# 	source "$(HOME)/.sdkman/bin/sdkman-init.sh"
 
 aliases-and-env-vars:
 	shell/add-aliases-and-vars.sh
@@ -15,4 +16,4 @@ aliases-and-env-vars:
 gitconfig:
 	./gitconfig.sh
 
-setup: omz-theme aliases-and-env-vars gitconfig install-sdkman
+setup-base: omz-theme aliases-and-env-vars
